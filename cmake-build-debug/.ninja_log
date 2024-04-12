@@ -1,9 +1,6 @@
 # ninja log v5
-4	176	7346102177049043	CMakeFiles/Online_Shop_Cproject.dir/main.c.obj	7beb073aceb351e6
-177	416	7346102179227639	Online_Shop_Cproject.exe	bca77fb081f70f54
-22	227	7346099385615162	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
-2	391	7346111157024501	build.ninja	559a09696abbff51
 4	205	7346111160544310	CMakeFiles/Online_Shop_Cproject.dir/main.c.obj	7beb073aceb351e6
-31	216	7346111160641758	CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj	8d437aa63a28e801
-17	227	7346111160771900	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
 227	589	7346111163239347	Online_Shop_Cproject.exe	b69a57faedea0693
+17	227	7346111160771900	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
+2	391	7346183591977473	build.ninja	559a09696abbff51
+31	216	7346111160641758	CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj	8d437aa63a28e801
