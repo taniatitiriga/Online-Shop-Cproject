@@ -22,17 +22,33 @@ void login(char *name, char *surname) {
 void placeOrder(Order *orders, int *orderCount) {
     printf("Placing an order...\n");
     Order newOrder;
-    newOrder.code = *orderCount + 1; // Increment order code
+    newOrder.code = *orderCount + 1;
     strcpy(newOrder.personName, "John");
     strcpy(newOrder.personSurname, "Doe");
     printf("Enter product name: ");
     scanf("%s", newOrder.products[0].name);
+    int e = 0;
+    printf("Products found:");
+    for (int i = 0; i < productCount; i++) {
+        if (strstr(products[i].name, newOrder.products[0].name) != NULL) {
+            e=1;
+            printf("Product Name: %s, Quantity: %d, Price: %.2f\n", products[i].name, products[i].quantity, products[i].price);
+        }
+    }
+    if(e==0){
+        printf("No product named ' %s ' in our stock yet.\n",newOrder.products[0].name);
+    }
+
     printf("Enter quantity: ");
     scanf("%d", &newOrder.products[0].quantity);
-    printf("Enter price: ");
-    scanf("%f", &newOrder.products[0].price);
-    printf("Enter amount paid: ");
-    scanf("%f", &newOrder.amountPaid);
+    for (int i = 0; i < productCount; i++) {
+        if (strstr(products[i].name, newOrder.products[0].name) != NULL) {
+            e=1;
+        }
+    }
+    if(e==0){
+        printf("Product ' %s ' not in our stock\n",newOrder.products[0].name);
+    }
 
     orders[*orderCount] = newOrder;
     (*orderCount)++;
@@ -63,7 +79,7 @@ void viewOrders(Order *orders, int orderCount) {
     printf("Orders:\n");
     for (int i = 0; i < orderCount; i++) {
         printf("Order Code: %d, Person: %s %s, Amount Paid: %.2f\n",
-               orders[i].code, orders[i].personName, orders[i].personSurname, orders[i].amountPaid);
+               orders[i].code, orders[i].personName, orders[i].personSurname);
         printf("Products:\n");
         for (int j = 0; j < sizeof(orders[i].products) / sizeof(orders[i].products[0]); j++) {
             printf("\tProduct Name: %s, Quantity: %d, Price: %.2f\n",
@@ -75,7 +91,6 @@ void viewOrders(Order *orders, int orderCount) {
 void searchProducts(Product *products, int productCount) {
     printf("Searching for products...\n");
     char keyword[50];
-    printf("Enter product name or price range (min-max): ");
     scanf("%s", keyword);
 
     printf("Search Results:\n");

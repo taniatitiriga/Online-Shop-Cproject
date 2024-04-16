@@ -8,7 +8,7 @@ typedef struct {
     char personName[50];
     char personSurname[50];
     Product products[10];
-    float amountPaid;
+//    float amountPaid;
 } Order;
 
 #endif
