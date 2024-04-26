@@ -9,4 +9,6 @@ add_executable(Online_Shop_Cproject
         account.c
         file.h
         file.c
-        globals.h)
+        globals.h
+        stock.h
+        stock.c)

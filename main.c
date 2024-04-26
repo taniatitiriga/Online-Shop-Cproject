@@ -1,23 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "account.h"
+#include "stock.h"
 #include "globals.h"
+#include "file.h"
 
 int loginStatus = 0;
+
 
 int main() {
     int choice;
     int exitCode = 0;
+    initializeStock();
 
     do {
 
         if (loginStatus) {
-
-        #if defined (_WIN32) || defined(_WIN64)
-        system("cls"); // windows
-        #else
-        system("clear"); // linux or macOS
-        #endif
 
             printf("1. View stock\n");
             printf("2. Buy from store\n");
@@ -29,13 +27,13 @@ int main() {
 
             switch (choice) {
                 case 1:
-                    //print stock
+                    viewStock();
                     break;
                 case 2:
-                    //buy
+                    buyFromStore();
                     break;
                 case 3:
-                    //sell
+                    sellToStore();
                     break;
                 case 4:
                     printf("Logging out...\n");
@@ -46,12 +44,6 @@ int main() {
             }
 
         } else {
-
-        #if defined (_WIN32) || defined(_WIN64)
-        system("cls"); // windows
-        #else
-        system("clear"); // linux or macOS
-        #endif
 
             printf("1. Log in\n");
             printf("2. Create account\n");

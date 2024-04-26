@@ -3,5 +3,6 @@
 
 int writeAccountToFile(char *firstName, char *username, char *password);
 int checkLogin(char *username, char *password);
+void initializeStock();
 
 #endif
