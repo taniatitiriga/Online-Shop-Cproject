@@ -15,7 +15,7 @@ int main() {
 
     int choice;
     do {
-        printf("\n=== Online Shop Menu ===\n");
+        printf("\n________ MENU ________\n");
         printf("1. Login\n");
         printf("2. Place Order\n");
         printf("3. Sell Products to Store\n");
