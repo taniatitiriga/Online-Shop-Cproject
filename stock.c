@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "stock.h"
 #include "globals.h"
 
@@ -121,17 +122,9 @@ void buyFromStore() {
     printf("Enter the quantity: ");
     scanf("%d", &quantity);
 
-    // update stock if enough quantity available
-    FILE *file = fopen("stock.txt", "r");
+    FILE *file = fopen("stock.txt", "r+");
     if (file == NULL) {
-        perror("Error opening file");
-        return;
-    }
-
-    FILE *tempFile = fopen("temp.txt", "w");
-    if (tempFile == NULL) {
-        perror("Error opening file");
-        fclose(file);
+        perror("Error opening stock file");
         return;
     }
 
@@ -140,29 +133,26 @@ void buyFromStore() {
     char name[50];
     double price;
 
-    while (fscanf(file, "%d %s %d %lf", &tempCode, name, &tempQuantity, &price) != EOF) {
-
+    long int pos = ftell(file);
+    while (fscanf(file, "%d %s %d %lf", &tempCode, name, &tempQuantity, &price) == 4) {
         if (tempCode == code) {
             found = 1;
             if (tempQuantity >= quantity) {
                 tempQuantity -= quantity;
+                fseek(file, pos, SEEK_SET);
+                fprintf(file, "%05d %s %d %.2f\n", tempCode, name, tempQuantity, price);
+                printf("Product bought from store.\n");
             } else {
-                quantity = tempQuantity; // only sell available quantity
-                tempQuantity = 0;
+                printf("Not enough quantity available.\n");
             }
+            break;
         }
-        fprintf(tempFile, "%d %s %d %.2f\n", tempCode, name, tempQuantity, price);
+        pos = ftell(file);
+    }
+
+    if (!found) {
+        printf("Product code does not exist.\n");
     }
 
     fclose(file);
-    fclose(tempFile);
-
-    remove("stock.txt");
-    rename("temp.txt", "stock.txt");
-
-    if (found) {
-        printf("Product bought from store.\n");
-    } else {
-        printf("Product code does not exist.\n");
-    }
 }
