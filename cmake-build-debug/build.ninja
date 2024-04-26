@@ -55,14 +55,14 @@ build CMakeFiles/Online_Shop_Cproject.dir/main.c.obj: C_COMPILER__Online_Shop_Cp
   OBJECT_DIR = CMakeFiles\Online_Shop_Cproject.dir
   OBJECT_FILE_DIR = CMakeFiles\Online_Shop_Cproject.dir
 
-build CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj: C_COMPILER__Online_Shop_Cproject_unscanned_Debug C$:/Users/Tania/uni/Online-Shop-Cproject/shop.c || cmake_object_order_depends_target_Online_Shop_Cproject
-  DEP_FILE = CMakeFiles\Online_Shop_Cproject.dir\shop.c.obj.d
+build CMakeFiles/Online_Shop_Cproject.dir/account.c.obj: C_COMPILER__Online_Shop_Cproject_unscanned_Debug C$:/Users/Tania/uni/Online-Shop-Cproject/account.c || cmake_object_order_depends_target_Online_Shop_Cproject
+  DEP_FILE = CMakeFiles\Online_Shop_Cproject.dir\account.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Online_Shop_Cproject.dir
   OBJECT_FILE_DIR = CMakeFiles\Online_Shop_Cproject.dir
 
-build CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj: C_COMPILER__Online_Shop_Cproject_unscanned_Debug C$:/Users/Tania/uni/Online-Shop-Cproject/fileIO.c || cmake_object_order_depends_target_Online_Shop_Cproject
-  DEP_FILE = CMakeFiles\Online_Shop_Cproject.dir\fileIO.c.obj.d
+build CMakeFiles/Online_Shop_Cproject.dir/file.c.obj: C_COMPILER__Online_Shop_Cproject_unscanned_Debug C$:/Users/Tania/uni/Online-Shop-Cproject/file.c || cmake_object_order_depends_target_Online_Shop_Cproject
+  DEP_FILE = CMakeFiles\Online_Shop_Cproject.dir\file.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Online_Shop_Cproject.dir
   OBJECT_FILE_DIR = CMakeFiles\Online_Shop_Cproject.dir
@@ -75,7 +75,7 @@ build CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj: C_COMPILER__Online_Shop_
 #############################################
 # Link the executable Online_Shop_Cproject.exe
 
-build Online_Shop_Cproject.exe: C_EXECUTABLE_LINKER__Online_Shop_Cproject_Debug CMakeFiles/Online_Shop_Cproject.dir/main.c.obj CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj
+build Online_Shop_Cproject.exe: C_EXECUTABLE_LINKER__Online_Shop_Cproject_Debug CMakeFiles/Online_Shop_Cproject.dir/main.c.obj CMakeFiles/Online_Shop_Cproject.dir/account.c.obj CMakeFiles/Online_Shop_Cproject.dir/file.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Online_Shop_Cproject.dir
