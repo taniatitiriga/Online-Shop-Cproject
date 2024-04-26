@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "account.h"
 #include "file.h"
+#include "globals.h"
 
 void createAccount() {
     char firstName[50];
@@ -36,8 +38,20 @@ void login() {
 
     if (checkLogin(username, password)) {
         printf("Login successful!\n");
+        loginStatus = 1;
     } else {
         printf("Incorrect username or password.\n");
     }
+    printf("Press Enter to continue...");
 
+
+    // attempt to fix the clear screen problem
+    getchar();
+    getchar();
+
+    #if defined (_WIN32) || defined(_WIN64)
+    system("cls");
+    #else
+    system("clear");
+    #endif
 }
