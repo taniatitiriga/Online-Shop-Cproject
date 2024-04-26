@@ -1,15 +1,11 @@
 # ninja log v5
-4	205	7346111160544310	CMakeFiles/Online_Shop_Cproject.dir/main.c.obj	7beb073aceb351e6
-227	589	7346111163239347	Online_Shop_Cproject.exe	b69a57faedea0693
-17	227	7346111160771900	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
-2	391	7346183591977473	build.ninja	559a09696abbff51
-31	216	7346111160641758	CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj	8d437aa63a28e801
-2	172	7346199612604091	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
-172	495	7346199615640593	Online_Shop_Cproject.exe	b69a57faedea0693
 4	208	7346226207226529	CMakeFiles/Online_Shop_Cproject.dir/main.c.obj	7beb073aceb351e6
-20	248	7346226207444970	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
-249	538	7346226209936758	Online_Shop_Cproject.exe	b69a57faedea0693
-4	199	7346226931807471	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
-200	472	7346226933993703	Online_Shop_Cproject.exe	b69a57faedea0693
-4	208	7346233167497024	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
 209	480	7346233169979045	Online_Shop_Cproject.exe	b69a57faedea0693
+36	437	7358295643133002	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
+2	391	7358301538743059	build.ninja	559a09696abbff51
+23	434	7358295643109097	CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj	8d437aa63a28e801
+1	676	7358301538743059	build.ninja	559a09696abbff51
+5	216	7358301541925531	CMakeFiles/Online_Shop_Cproject.dir/main.c.obj	7beb073aceb351e6
+33	222	7358301542000074	CMakeFiles/Online_Shop_Cproject.dir/fileIO.c.obj	8d437aa63a28e801
+19	263	7358301542189146	CMakeFiles/Online_Shop_Cproject.dir/shop.c.obj	37fccfd3b1d29c6a
+263	700	7358301546554358	Online_Shop_Cproject.exe	b69a57faedea0693

@@ -23,4 +23,3 @@ void readOrdersFromFile(const char* filePath);
 void writeOrdersToFile(const char* filePath, const char* message);
 
 #endif
-

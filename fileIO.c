@@ -50,4 +50,3 @@ FILE* openFile(const char* filePath, const char* mode) {
 
     return file;
 }
-
