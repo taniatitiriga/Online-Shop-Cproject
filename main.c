@@ -18,8 +18,8 @@ int main() {
         if (loginStatus) {
 
             printf("1. View stock\n");
-            printf("2. Buy from store\n");
-            printf("3. Sell to store\n");
+            printf("2. Log sold products\n");
+            printf("3. Add to stock\n");
             printf("4. Log out\n");
 
             printf("Enter your choice: ");

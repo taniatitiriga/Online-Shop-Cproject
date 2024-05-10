@@ -90,7 +90,6 @@ void sellToStore() {
                 printf("Enter the quantity to add: ");
                 scanf("%d", &quantity);
                 tempQuantity += quantity;
-                printf("Total quantity: %d, %d\n", tempQuantity, quantity);
             }
             fprintf(file, "%05d %s %d %.2f\n", tempCode, name, tempQuantity, price);
         }
