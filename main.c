@@ -5,7 +5,7 @@
 #include "globals.h"
 #include "file.h"
 
-int loginStatus = 0;
+int loginStatus = 1;
 
 
 int main() {

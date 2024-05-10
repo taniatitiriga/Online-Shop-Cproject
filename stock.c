@@ -80,14 +80,8 @@ void sellToStore() {
         char name[50];
         double price;
 
-        FILE *tempFile = fopen("temp.txt", "w");
-        if (tempFile == NULL) {
-            perror("Error opening file");
-            fclose(file);
-            return;
-        }
-
-        while (fscanf(file, "%d %s %d %lf", &tempCode, name, &tempQuantity, &price) != EOF) {
+        while (fscanf(file, "%d %s %d %lf", &tempCode, name, &tempQuantity, &price)  == 4) {
+            printf("%d %s %d %.2f\n", tempCode, name, tempQuantity, price);
             if (tempCode == code) {
                 found = 1;
                 printf("Product found in stock.\n");
@@ -95,16 +89,12 @@ void sellToStore() {
                 printf("Price: %.2f\n", price);
                 printf("Enter the quantity to add: ");
                 scanf("%d", &quantity);
-                tempQuantity += quantity; // Increase quantity
+                tempQuantity += quantity;
+                printf("Total quantity: %d, %d\n", tempQuantity, quantity);
             }
-            fprintf(tempFile, "%05d %s %d %.2f\n", tempCode, name, tempQuantity, price);
+            fprintf(file, "%05d %s %d %.2f\n", tempCode, name, tempQuantity, price);
         }
-
         fclose(file);
-        fclose(tempFile);
-
-        remove("stock.txt");
-        rename("temp.txt", "stock.txt");
 
         if (!found) {
             printf("Product code does not exist.\n");
@@ -140,10 +130,13 @@ void buyFromStore() {
             if (tempQuantity >= quantity) {
                 tempQuantity -= quantity;
                 fseek(file, pos, SEEK_SET);
-                fprintf(file, "%05d %s %d %.2f\n", tempCode, name, tempQuantity, price);
+                fprintf(file, "\n%05d %s %d %.2f", tempCode, name, tempQuantity, price);
                 printf("Product bought from store.\n");
             } else {
-                printf("Not enough quantity available.\n");
+                quantity = 0;
+                fseek(file, pos, SEEK_SET);
+                fprintf(file, "\n%05d %s %d %.2f", tempCode, name, quantity, price);
+                printf("Not enough quantity available (bought %d pieces).\n", tempQuantity);
             }
             break;
         }
